@@ -20,7 +20,7 @@ const client = new Client({
 
 client.connect();
 
-client.query('SELECT * FROM public;', (err, res) => {
+client.query('SELECT * FROM public."Item";', (err, res) => {
   if (err) throw err;
 
   for (let row of res.rows) {

@@ -10,21 +10,26 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
+// Connection to the Heroku:pgsql database
+const { Client } = require('pg');
 
-  const { Client } = require('pg');
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 
-  const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-  });
-  
-  client.connect();
-  
-  client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-    }
-    client.end();
-  });
-  
+client.connect();
+
+client.query('SELECT * FROM public;', (err, res) => {
+  if (err) throw err;
+
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+
+  client.end();
+});
+
+
+
+

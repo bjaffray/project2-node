@@ -21,11 +21,11 @@ function displayItems()
             var item = data.list[i];
             if(i == 0){
                 itemID = item.item_id;
-                $("#displayItems_id").empty().append("");
+                $("#displayItems_id").empty().append("<div>HEY THERE");
             }
             else{
                 itemID = item.item_id;
-                $("#displayItems_id").append("");
+                $("#displayItems_id").append("<div>HEY THERE");
             }
         }
     })

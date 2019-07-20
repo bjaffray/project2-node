@@ -1,4 +1,4 @@
-const mainModel = require("../public/model/mainModel.js")
+const mainModel = require("../Model/mainModel.js")
 
 
 function getItems(req, res){

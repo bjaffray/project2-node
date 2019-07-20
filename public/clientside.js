@@ -21,11 +21,11 @@ function displayItems()
             var item = data.list[i];
             if(i == 0){
                 itemID = item.item_id;
-                $("#displayItems_id").empty().append("");
+                $("#displayItems_id").empty().append("<h1>FIRETRUCK</h1>");
             }
             else{
                 itemID = item.item_id;
-                $("#displayItems_id").append("");
+                $("#displayItems_id").append("<h1>FIRETRUCK</h1>");
             }
         }
     })
@@ -54,4 +54,3 @@ function displayItems()
             }
             ?> --> */}
 
-            

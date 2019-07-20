@@ -22,6 +22,7 @@ function displayItems()
             if(i == 0){
                 itemID = item.item_id;
                 $("#displayItems_id").empty().append("<h1>FIRETRUCK</h1>");
+                alert("Running");
             }
             else{
                 itemID = item.item_id;

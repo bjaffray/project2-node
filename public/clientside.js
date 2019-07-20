@@ -16,9 +16,9 @@ function checkInfo(address)
 
 function displayItems()
 {
-    alert("Running");
-    
     $.get("/getItems", function(data) {
+        alert("Running");
+        
         for (var i = 0; i < data.list.length; i++) {
             var item = data.list[i];
             if(i == 0){

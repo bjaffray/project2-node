@@ -16,6 +16,8 @@ function checkInfo(address)
 
 function displayItems()
 {
+    console.log("starting");
+
     $.get("/getItems", function(data) {
         console.log("Running");
 

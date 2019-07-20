@@ -7,7 +7,7 @@ require('util');
 function getItemDB(callback)
 {
     var sql = 'SELECT * FROM public."Item";'
-    
+
     pool.query(sql, function(error, db_info){
         if(error){
             console.log("Error in query Item: ")
@@ -24,3 +24,9 @@ function getItemDB(callback)
         }
     })
 }
+
+
+
+module.exports = {
+    getItemDB: getItemDB
+};

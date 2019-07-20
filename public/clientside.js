@@ -21,11 +21,11 @@ function displayItems()
             var item = data.list[i];
             if(i == 0){
                 itemID = item.item_id;
-                $("#displayItems_id").empty().append("<div>HEY THERE");
+                $("#displayItems_id").empty().append("");
             }
             else{
                 itemID = item.item_id;
-                $("#displayItems_id").append("<div>HEY THERE");
+                $("#displayItems_id").append("");
             }
         }
     })
@@ -53,3 +53,5 @@ function displayItems()
                 echo "onclick=\"checkInfo($i)\">";
             }
             ?> --> */}
+
+            

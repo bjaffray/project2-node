@@ -11,3 +11,10 @@ function getItems(req, res){
         }
     })
 }
+
+
+
+
+module.exports = {
+    getItems: getItems
+};

@@ -16,13 +16,14 @@ function checkInfo(address)
 
 function displayItems()
 {
+    alert("Running");
+    
     $.get("/getItems", function(data) {
         for (var i = 0; i < data.list.length; i++) {
             var item = data.list[i];
             if(i == 0){
                 itemID = item.item_id;
                 $("#displayItems_id").empty().append("<h1>FIRETRUCK</h1>");
-                alert("Running");
             }
             else{
                 itemID = item.item_id;

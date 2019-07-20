@@ -8,28 +8,4 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-
-// Connection to the Heroku:pgsql database
-const { Client } = require('pg');
-
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
-
-client.connect();
-
-client.query('SELECT * FROM public."Item";', (err, res) => {
-  if (err) throw err;
-
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-
-  client.end();
-});
-
-
-
-
+  .get('/getItems', mainController.getItems)

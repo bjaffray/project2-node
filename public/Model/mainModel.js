@@ -7,6 +7,7 @@ require('util');
 function getItemDB(callback)
 {
     var sql = 'SELECT * FROM public."Item";'
+    console.log("Ex: " + sql);
 
     pool.query(sql, function(error, db_info){
         if(error){

@@ -6,8 +6,12 @@ const mainController = require("./public/Controller/mainController.js");
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(express.json())
+  .use(express.urlencoded({extended: true}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/getItems', mainController.getItems)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+

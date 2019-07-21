@@ -25,11 +25,11 @@ function displayItems()
             var item = data.list[i];
             if(i == 0){
                 itemID = item.item_id;
-                $("#displayItems_id").empty().append("<h1>FIRETRUCK</h1>");
+                $("#displayItems_id").empty().append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "\"> + <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"");
             }
             else{
                 itemID = item.item_id;
-                $("#displayItems_id").append("<h1>FIRETRUCK</h1>");
+                $("#displayItems_id").append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "\"> + <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"");
             }
         }
     })
@@ -56,5 +56,17 @@ function displayItems()
                 if ($to_print->in_cart == 1) echo "checked";
                 echo "onclick=\"checkInfo($i)\">";
             }
-            ?> --> */}
+            ?> 
+        
+        
+        <tr onclick="checkInfo(" + i + ")"> +
+        <td> + item.ItemName +
+        <td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "\"> +
+        <td> + item.Description +
+        <td> + item.ItemPrice +
+        <td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value="1"
+        
+        
+        
+        --> */}
 

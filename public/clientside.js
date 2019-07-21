@@ -18,7 +18,7 @@ function displayItems()
 {
     console.log("starting");
 
-    $get("/getItems", function(data) {
+    $.get("/getItems", function(data) {
         console.log("Running");
 
         for (var i = 0; i < data.list.length; i++) {

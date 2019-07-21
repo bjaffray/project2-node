@@ -23,14 +23,10 @@ function displayItems()
 
         for (var i = 0; i < data.list.length; i++) {
             var item = data.list[i];
-            if(i == 0){
-                itemID = item.item_id;
-                $("#displayItems_id").append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "'s Image\"> <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"  disabled");
-            }
-            else{
-                itemID = item.item_id;
-                $("#displayItems_id").append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "'s Image\"> <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"  disabled");
-            }
+            itemID = item.item_id;
+            // Commented out so that we can actualy complie without breaking the app cause of the img bug
+            //$("#displayItems_id").append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img src=\"" + item.PicPath + "\" alt=\"" + item.ItemName + "'s Image\"> <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"  disabled");
+            $("#displayItems_id").append("<tr onclick=\"checkInfo(" + i + ")\"> <td>" + item.ItemName + "<td><img alt=\"" + item.ItemName + "'s Image\"> <td>" + item.Description + "<td>" + item.ItemPrice + "<td><input type=\"checkbox\" name=\"cart" + i + "\" id=\"" + i + "\" value=\"1\"  disabled");
         }
     })
 }

@@ -1,10 +1,11 @@
 const express = require('express')
+const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 5000
 require('dotenv').config();
 const mainController = require("./public/Controller/mainController.js");
 
-express()
+app
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.json())
   .use(express.urlencoded({extended: true}))

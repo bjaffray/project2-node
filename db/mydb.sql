@@ -28,7 +28,7 @@ VALUES
 ('Bottle'
 ,650
 ,'An old bottle that survived the ages, the contents placed inside become enchanted.'
-,'public/Pictures/Bottle_(Full)_icon.png');
+,'./Pictures/Bottle_(Full)_icon.png');
 
 -- Ring of Health
 INSERT INTO public."Item"
